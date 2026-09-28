@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Student Study Planner</h1>
+            <p>Plan your study. Track your progress.</p>
+        </header>
+
+        <section class="task-form">
+            <input type="text" id="taskInput" placeholder="Enter a study task">
+
+            <select id="priority">
+                <option value="High">High Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="Low">Low Priority</option>
+            </select>
+
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section class="stats">
+            <div>
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div>
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div>
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <div class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+        </div>
+
+        <section>
+            <ul id="taskList"></ul>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
